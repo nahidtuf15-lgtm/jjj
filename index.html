@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Gülşən 🌹</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff6a88, #ff99ac);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 40px 50px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      max-width: 430px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .bouquet {
+      font-size: 80px;
+      cursor: pointer;
+      transition: transform 0.3s;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .bouquet:hover {
+      transform: scale(1.15);
+    }
+
+    .hint {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .message {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #444;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Gülşən</h1>
+
+    <div class="bouquet" onclick="showMessage()">💐</div>
+    <div class="hint">Gül buketinə kliklə 🌹</div>
+
+    <div class="message" id="message">
+      Bu gül buketi gülümsəməyin üçündür ✨  
+      Hər açanda xatırla ki, dəyərlisən 🌸
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
